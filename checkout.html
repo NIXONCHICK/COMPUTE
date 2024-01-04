@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ecommerce Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="styles/shared/general.css" />
+        <link rel="stylesheet" href="styles/shared/footer.css" />
+        <link rel="stylesheet" href="styles/pages/checkout/checkout-header.css" />
+        <link rel="stylesheet" href="styles/pages/checkout/checkout.css" />
+        <script type="module" src="data/home-page.js" defer></script>
+        <script type="module" src="data/checkout-page.js" defer></script>
+        <script type="module" src="scripts/checkout-page/cart.js" defer></script>
+        <script type="module" src="scripts/checkout-page/order-summary.js" defer></script>
+        <script type="module" src="scripts/checkout-page/wish-list.js" defer></script>
+        <script src="scripts/shared/footer.js" defer></script>
+    </head>
+    <body>
+        <header class="checkout-header-container">
+            <section class="checkout-header-left-section">
+                <a class="checkout-header-logo" href="index.html"> Compute </a>
+            </section>
+
+            <section class="checkout-header-middle-section">Checkout</section>
+
+            <section class="checkout-header-right-section">
+                <span class="checkout-header-cart-quantity-count"></span> Items
+            </section>
+        </header>
+
+        <main>
+            <div class="cart-section-title">Your Cart</div>
+            <div class="cart-order-summary-grid">
+                <section class="cart-items-container"></section>
+
+                <section class="order-summary-section-container">
+                    <div class="promo-code-container">
+                        <input
+                            class="promo-code-input"
+                            type="text"
+                            id="uniquePromoCodeInput"
+                            placeholder="Add promo code"
+                        />
+                        <button class="add-promo-code-button button-primary">Add</button>
+                    </div>
+
+                    <span class="valid-promo-code-message"
+                        >Promotion code applied
+                        <span class="remove-promo-code-button link-primary">Remove</span></span
+                    >
+                    <span class="invalid-promo-code-message"></span>
+
+                    <div class="order-summary-top-rows-container">
+                        <div class="order-summary-row">
+                            <div class="label-primary">Subtotal</div>
+                            <div class="order-summary-money order-summary-subtotal"></div>
+                        </div>
+                        <div class="order-summary-row">
+                            <div class="label-primary">Discounts</div>
+                            <div class="order-summary-money order-summary-discount"></div>
+                        </div>
+                        <div class="order-summary-row">
+                            <div class="label-primary">Shipping</div>
+                            <div class="order-summary-money order-summary-shipping"></div>
+                        </div>
+                        <div class="order-summary-row">
+                            <div class="label-primary">GST/HST</div>
+                            <div class="order-summary-money order-summary-tax"></div>
+                        </div>
+                    </div>
+
+                    <div class="order-summary-row order-total-row">
+                        <div>Total</div>
+                        <div class="order-summary-money order-summary-total"></div>
+                    </div>
+                    <button class="place-order-button button-primary">Complete purchase</button>
+                </section>
+            </div>
+
+            <div class="wish-list-section-title">Your Wish List</div>
+            <section class="wish-list-container"></section>
+        </main>
+
+        <div id="footerContainer"></div>
+    </body>
+</html>
